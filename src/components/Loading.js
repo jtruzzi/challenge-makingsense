@@ -48,7 +48,7 @@ const loaderCss = css({
     left: "-200px",
     width: "200px",
     height: "4px",
-    backgroundColor: "#2980b9",
+    backgroundColor: "#f31d24",
     animation: `${progressAnimation} 2s linear infinite`
   }
 });

@@ -11,6 +11,7 @@ const fakeWaitingTime = async value => {
 };
 
 export const getCharacters = async () => {
+  console.log("Fetching characters");
   if (process.env.REACT_APP_SHOULD_USE_MOCKS === "true") {
     return fakeWaitingTime(require("./mocks/characters.json"));
   }
@@ -29,6 +30,7 @@ export const getCharacters = async () => {
 };
 
 export const getCharacterDetails = async characterId => {
+  console.log("Fetching character ", characterId);
   if (process.env.REACT_APP_SHOULD_USE_MOCKS === "true")
     return fakeWaitingTime(require("./mocks/details.json"));
 

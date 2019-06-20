@@ -21,11 +21,11 @@ export function characterDetailsFetchDataSuccess(details) {
   };
 }
 
-export function characterDetailsFetchData() {
+export function characterDetailsFetchData(characterId) {
   return async dispatch => {
     dispatch(characterDetailsIsLoading(true));
     try {
-      const response = await getCharacterDetails();
+      const response = await getCharacterDetails(characterId);
       const characterDetails = response.data.results;
       dispatch(characterDetailsFetchDataSuccess(characterDetails));
       dispatch(characterDetailsIsLoading(false));

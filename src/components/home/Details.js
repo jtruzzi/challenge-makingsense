@@ -1,12 +1,23 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { css } from "glamor";
 import { connect } from "react-redux";
 import { characterDetailsFetchData } from "../../actions/characterDetails";
+import { withRouter } from "react-router-dom";
 
-class Details extends Component {
-  componentDidMount() {
-    this.props.fetchData();
+class Details extends PureComponent {
+  componentWillMount() {
+    const { match } = this.props;
+    const characterId = match.params.characterId;
+    this.props.fetchData(characterId);
   }
+
+  componentDidUpdate = prevProps => {
+    const { match } = this.props;
+    const characterId = match.params.characterId;
+    if (characterId !== prevProps.match.params.characterId) {
+      this.props.fetchData(characterId);
+    }
+  };
 
   render() {
     const { details, hasErrored, isLoading } = this.props;
@@ -15,32 +26,32 @@ class Details extends Component {
       return <p>No details found</p>;
     }
 
-    if (isLoading) {
-      return <p>Loading</p>;
-    }
-
     return (
-      <div className={`${heroesListCss}`}>
-        {details && (
-          <>
-            <h1>{details.name}</h1>
-            <div className={`${characterCss}`}>
-              <div className="content">
-                <div className={"title"} />
-                <div className={"description"}>{details.description}</div>
-                <a
-                  href={details.urls && details.urls.map(url => url.url)}
-                  target="blank"
-                  alt={details.name}
-                >
-                  {details.urls && details.urls.map(url => url.url)}
-                </a>
-              </div>
-              <img src={details.thumbnail.path} alt={details.name} />
-            </div>
-          </>
+      <>
+        {!isLoading && (
+          <div className={`${heroesListCss}`}>
+            {details && (
+              <>
+                <h1>{details.name}</h1>
+                <div className={`${characterCss}`}>
+                  <div className="content">
+                    <div className={"title"} />
+                    <div className={"description"}>{details.description}</div>
+                    <a
+                      href={details.urls && details.urls.map(url => url.url)}
+                      target="blank"
+                      alt={details.name}
+                    >
+                      {details.urls && details.urls.map(url => url.url)}
+                    </a>
+                  </div>
+                  <img src={details.thumbnail.path} alt={details.name} />
+                </div>
+              </>
+            )}
+          </div>
         )}
-      </div>
+      </>
     );
   }
 }
@@ -48,7 +59,8 @@ class Details extends Component {
 const heroesListCss = css({
   flexGrow: 1,
   flexDirection: "column",
-  backgroundColor: "#EEEEEE"
+  padding: "30px",
+  marginLeft: "400px"
 });
 
 const characterCss = css({
@@ -59,7 +71,7 @@ const characterCss = css({
     width: "500px"
   },
   "> .content": {
-    textAlign: "center",
+    textAlign: "left",
     "> .title": {
       fontSize: "20px"
     },
@@ -79,11 +91,13 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchData: () => dispatch(characterDetailsFetchData())
+    fetchData: characterId => dispatch(characterDetailsFetchData(characterId))
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Details);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Details)
+);

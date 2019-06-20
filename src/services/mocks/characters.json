@@ -5,13 +5,97 @@
     "results": [
       {
         "id": "11111",
+        "name": "Spiderman",
+        "description": "Description of spiderman",
+        "modified": null,
+        "urls": [
+          {
+            "type": "string",
+            "url": "http://www.marvel.com"
+          }
+        ],
+        "thumbnail": {
+          "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
+          "extension": "jpg"
+        },
+        "comics": {
+          "available": 2
+        },
+        "stories": {
+          "available": 2
+        },
+        "events": {
+          "available": 2
+        },
+        "series": {
+          "available": 2
+        }
+      },
+      {
+        "id": "22222",
         "name": "Hulk",
         "description": "Description of Hulk",
         "modified": null,
         "urls": [
           {
             "type": "string",
-            "url": "http://www.google.com"
+            "url": "http://www.marvel.com"
+          }
+        ],
+        "thumbnail": {
+          "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
+          "extension": "jpg"
+        },
+        "comics": {
+          "available": 2
+        },
+        "stories": {
+          "available": 2
+        },
+        "events": {
+          "available": 2
+        },
+        "series": {
+          "available": 2
+        }
+      },
+      {
+        "id": "3333",
+        "name": "Captain America",
+        "description": "Description of Captain America",
+        "modified": null,
+        "urls": [
+          {
+            "type": "string",
+            "url": "http://www.marvel.com"
+          }
+        ],
+        "thumbnail": {
+          "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
+          "extension": "jpg"
+        },
+        "comics": {
+          "available": 2
+        },
+        "stories": {
+          "available": 2
+        },
+        "events": {
+          "available": 2
+        },
+        "series": {
+          "available": 2
+        }
+      },
+      {
+        "id": "4444",
+        "name": "Iron Man",
+        "description": "Description of Iron Man",
+        "modified": null,
+        "urls": [
+          {
+            "type": "string",
+            "url": "http://www.marvel.com"
           }
         ],
         "thumbnail": {
@@ -39,7 +123,35 @@
         "urls": [
           {
             "type": "string",
-            "url": "http://www.google.com"
+            "url": "http://www.marvel.com"
+          }
+        ],
+        "thumbnail": {
+          "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
+          "extension": "jpg"
+        },
+        "comics": {
+          "available": 2
+        },
+        "stories": {
+          "available": 2
+        },
+        "events": {
+          "available": 2
+        },
+        "series": {
+          "available": 2
+        }
+      },
+      {
+        "id": "11111",
+        "name": "Hulk",
+        "description": "Description of Hulk",
+        "modified": null,
+        "urls": [
+          {
+            "type": "string",
+            "url": "http://www.marvel.com"
           }
         ],
         "thumbnail": {
