@@ -1,0 +1,34 @@
+{
+  "code": 200,
+  "status": "ok",
+  "data": {
+    "results": {
+      "id": "11111",
+      "name": "Hulk",
+      "description": "Description of Hulk",
+      "modified": null,
+      "urls": [
+        {
+          "type": "string",
+          "url": "http://www.google.com"
+        }
+      ],
+      "thumbnail": {
+        "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
+        "extension": "jpg"
+      },
+      "comics": {
+        "available": 2
+      },
+      "stories": {
+        "available": 2
+      },
+      "events": {
+        "available": 2
+      },
+      "series": {
+        "available": 2
+      }
+    }
+  }
+}
