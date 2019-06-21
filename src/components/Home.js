@@ -1,13 +1,13 @@
 import React from "react";
 import List from "./home/List";
 import Details from "./home/Details";
-import Loading from "./Loading";
+import ProgressLoader from "./ProgressLoader";
 
 class Home extends React.Component {
   render() {
     return (
       <>
-        <Loading />
+        <ProgressLoader />
         <List />
         <Details />
       </>

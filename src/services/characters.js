@@ -11,16 +11,15 @@ const fakeWaitingTime = async value => {
 };
 
 export const getCharacters = async () => {
-  console.log("Fetching characters");
   if (process.env.REACT_APP_SHOULD_USE_MOCKS === "true") {
     return fakeWaitingTime(require("./mocks/characters.json"));
   }
 
   const querystring = buildBaseQuerystrings();
   const response = await fetch(
-    `${process.env.REACT_APP_MARVEL_API_URL_CHARACTERS}?${qs.stringify(
-      querystring
-    )}`
+    `${
+      process.env.REACT_APP_MARVEL_API_URL_CHARACTERS
+    }/characters?${qs.stringify(querystring)}`
   );
 
   if (response.ok) {
@@ -30,7 +29,6 @@ export const getCharacters = async () => {
 };
 
 export const getCharacterDetails = async characterId => {
-  console.log("Fetching character ", characterId);
   if (process.env.REACT_APP_SHOULD_USE_MOCKS === "true")
     return fakeWaitingTime(require("./mocks/details.json"));
 
@@ -38,7 +36,7 @@ export const getCharacterDetails = async characterId => {
   const response = await fetch(
     `${
       process.env.REACT_APP_MARVEL_API_URL_CHARACTERS
-    }/${characterId}?${qs.stringify(querystring)}`
+    }/characters/${characterId}?${qs.stringify(querystring)}`
   );
 
   if (response.ok) {
