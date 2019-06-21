@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/marvel-superheroes-demo/precache-manifest.870c5fc24ffaf1f886eb717304dbe7c6.js"
+  "/marvel-superheroes-demo/precache-manifest.c3f1cb06b35e807b522f335d710ff3be.js"
 );
 
 self.addEventListener('message', (event) => {
