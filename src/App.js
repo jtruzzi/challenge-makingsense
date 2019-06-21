@@ -9,10 +9,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter history={history}>
-        <Route
-          path={`${process.env.REACT_APP_BASE_PATH}/:characterId?`}
-          component={Home}
-        />
+        <Route path={`/:characterId?`} component={Home} />
       </BrowserRouter>
     );
   }

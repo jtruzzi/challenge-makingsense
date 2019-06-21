@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 class Character extends Component {
   handleCharacterChange = () => {
     const { history, character } = this.props;
-    history.push(`${process.env.REACT_APP_BASE_PATH}/${character.id}`);
+    history.push(`/${character.id}`);
   };
 
   renderFlag = field => {
