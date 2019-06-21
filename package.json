@@ -2,7 +2,9 @@
   "name": "marvel-superheroes",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jtruzzi.github.io/marvel-superheroes-demo",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "glamor": "^2.20.40",
     "md5": "^2.2.1",
     "qs": "^6.7.0",
@@ -17,6 +19,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

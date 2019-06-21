@@ -9,6 +9,13 @@ class Character extends Component {
     history.push(`/${character.id}`);
   };
 
+  renderFlag = field => {
+    const { character } = this.props;
+    if (character[field] && parseInt(character[field].available) > 0) {
+      return <span className={`${flagsCss}`}>{field}</span>;
+    }
+  };
+
   render() {
     const { key, character, selected } = this.props;
     return (
@@ -26,18 +33,10 @@ class Character extends Component {
               alt={character.name}
             />
             <div className={`${flagsContainerCss}`}>
-              <span className={`${flagsCss}`}>
-                {character.comics && character.comics.available > 0 && "Comics"}
-              </span>
-              <span className={`${flagsCss}`}>
-                {character.stories && character.stories.available && "Stories"}
-              </span>
-              <span className={`${flagsCss}`}>
-                {character.events && character.events.available && "Events"}
-              </span>
-              <span className={`${flagsCss}`}>
-                {character.series && character.series.available && "Series"}
-              </span>
+              {this.renderFlag("comics")}
+              {this.renderFlag("stories")}
+              {this.renderFlag("events")}
+              {this.renderFlag("series")}
             </div>
           </Col>
           <Col xs={12} />
@@ -62,8 +61,8 @@ const selectedCss = css({
 
 const flagsContainerCss = css({
   margin: "8px",
-  diaply: "flex",
-  justifyContent: "space-between",
+  display: "flex",
+  justifyContent: "space-around",
   width: "100%"
 });
 
@@ -80,7 +79,9 @@ const flagsCss = css({
   border: "1px solid black",
   padding: "5px 15px",
   marginRight: "5px",
-  borderRadius: "5px"
+  borderRadius: "5px",
+  textTransform: "uppercase",
+  fontSize: "12px"
 });
 
 export default withRouter(Character);

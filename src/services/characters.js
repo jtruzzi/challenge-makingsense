@@ -15,7 +15,9 @@ export const getCharacters = async () => {
     return fakeWaitingTime(require("./mocks/characters.json"));
   }
 
-  const querystring = buildBaseQuerystrings();
+  const querystring = {
+    apikey: process.env.REACT_APP_MARVEL_PUBLIC_KEY
+  };
   const response = await fetch(
     `${
       process.env.REACT_APP_MARVEL_API_URL_CHARACTERS
@@ -32,7 +34,9 @@ export const getCharacterDetails = async characterId => {
   if (process.env.REACT_APP_SHOULD_USE_MOCKS === "true")
     return fakeWaitingTime(require("./mocks/details.json"));
 
-  const querystring = buildBaseQuerystrings();
+  const querystring = {
+    apikey: process.env.REACT_APP_MARVEL_PUBLIC_KEY
+  };
   const response = await fetch(
     `${
       process.env.REACT_APP_MARVEL_API_URL_CHARACTERS
@@ -45,16 +49,18 @@ export const getCharacterDetails = async characterId => {
   throw new Error("Failed to get details");
 };
 
+// Unused: Alternative to make the api call including timestamp and md5 hash
 const buildBaseQuerystrings = () => {
   const ts = Math.floor(Date.now());
 
   return {
-    apikey: process.env.REACT_APP_MARVEL_PUBLIC_KEY,
+    apikey: process.env.REACT_APP_MARVEL_PRIVATE_KEY,
     ts: ts,
     hash: createAuthenticationHash(ts)
   };
 };
 
+// Unused: Alternative to make the api call including timestamp and md5 hash
 const createAuthenticationHash = ts => {
   return md5(
     ts +

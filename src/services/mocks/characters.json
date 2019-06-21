@@ -15,7 +15,7 @@
           }
         ],
         "thumbnail": {
-          "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
+          "path": "https://www.tienda-pinturas.com/wp-content/uploads/2018/11/266.jpg",
           "extension": "jpg"
         },
         "comics": {
@@ -43,7 +43,7 @@
           }
         ],
         "thumbnail": {
-          "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
+          "path": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/el-increible-hulk-1554403044.jpg?resize=480:*",
           "extension": "jpg"
         },
         "comics": {
@@ -53,7 +53,7 @@
           "available": 2
         },
         "events": {
-          "available": 2
+          "available": 0
         },
         "series": {
           "available": 2
@@ -68,23 +68,27 @@
           {
             "type": "string",
             "url": "http://www.marvel.com"
+          },
+          {
+            "type": "string",
+            "url": "http://www.marvel2.com"
           }
         ],
         "thumbnail": {
-          "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
+          "path": "https://www.sideshow.com/storage/product-images/300524/captain-america_marvel_gallery_5c4cf2a84e18f.jpg",
           "extension": "jpg"
         },
         "comics": {
           "available": 2
         },
         "stories": {
-          "available": 2
+          "available": 0
         },
         "events": {
           "available": 2
         },
         "series": {
-          "available": 2
+          "available": 0
         }
       },
       {
@@ -99,63 +103,7 @@
           }
         ],
         "thumbnail": {
-          "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
-          "extension": "jpg"
-        },
-        "comics": {
-          "available": 2
-        },
-        "stories": {
-          "available": 2
-        },
-        "events": {
-          "available": 2
-        },
-        "series": {
-          "available": 2
-        }
-      },
-      {
-        "id": "11111",
-        "name": "Hulk",
-        "description": "Description of Hulk",
-        "modified": null,
-        "urls": [
-          {
-            "type": "string",
-            "url": "http://www.marvel.com"
-          }
-        ],
-        "thumbnail": {
-          "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
-          "extension": "jpg"
-        },
-        "comics": {
-          "available": 2
-        },
-        "stories": {
-          "available": 2
-        },
-        "events": {
-          "available": 2
-        },
-        "series": {
-          "available": 2
-        }
-      },
-      {
-        "id": "11111",
-        "name": "Hulk",
-        "description": "Description of Hulk",
-        "modified": null,
-        "urls": [
-          {
-            "type": "string",
-            "url": "http://www.marvel.com"
-          }
-        ],
-        "thumbnail": {
-          "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
+          "path": "https://static.posters.cz/image/1300/fotomurales/iron-man-marvel-avengers-152-5x104-cm-130g/m2-vlies-non-woven-i44208.jpg",
           "extension": "jpg"
         },
         "comics": {

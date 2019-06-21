@@ -10,11 +10,19 @@
       "urls": [
         {
           "type": "string",
-          "url": "http://www.google.com"
+          "url": "http://www.marvel.com"
+        },
+        {
+          "type": "string",
+          "url": "http://www.marvel.com"
+        },
+        {
+          "type": "string",
+          "url": "http://www.marvel.com"
         }
       ],
       "thumbnail": {
-        "path": "https://i.ytimg.com/vi/wkJOd1z9DIE/maxresdefault.jpg",
+        "path": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/el-increible-hulk-1554403044.jpg?resize=480:*",
         "extension": "jpg"
       },
       "comics": {

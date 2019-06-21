@@ -38,7 +38,7 @@ describe("characters reducer", () => {
   });
 
   it("charactersFetchData", async () => {
-    process.env.REACT_APP_SHOULD_USE_MOCKS = true;
+    process.env.REACT_APP_SHOULD_USE_MOCKS = "true";
     const store = mockStore();
     await store.dispatch(charactersFetchData());
     const actions = store.getActions();

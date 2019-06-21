@@ -8,28 +8,29 @@ class Details extends PureComponent {
   componentWillMount() {
     const { match } = this.props;
     const characterId = match.params.characterId;
-    this.props.fetchData(characterId);
+    if (characterId) {
+      this.props.fetchData(characterId);
+    }
   }
 
   componentDidUpdate = prevProps => {
     const { match } = this.props;
     const characterId = match.params.characterId;
-    if (characterId !== prevProps.match.params.characterId) {
+    if (characterId && characterId !== prevProps.match.params.characterId) {
       this.props.fetchData(characterId);
     }
   };
 
   render() {
-    const { details, hasErrored, isLoading } = this.props;
-
-    if (hasErrored) {
-      return <p>No details found</p>;
-    }
+    const { details, hasErrored, isLoading, match } = this.props;
+    const characterId = match.params.characterId;
 
     return (
       <>
         {!isLoading && (
           <div className={`${heroesListCss}`}>
+            {!characterId && <p>Please choose a character</p>}
+            {hasErrored && <p>Character not found</p>}
             {details && (
               <>
                 <h1>{details.name}</h1>
@@ -37,15 +38,19 @@ class Details extends PureComponent {
                   <div className="content">
                     <div className={"title"} />
                     <div className={"description"}>{details.description}</div>
-                    <a
-                      href={details.urls && details.urls.map(url => url.url)}
-                      target="blank"
-                      alt={details.name}
-                    >
-                      {details.urls && details.urls.map(url => url.url)}
-                    </a>
                   </div>
                   <img src={details.thumbnail.path} alt={details.name} />
+                </div>
+                <div>
+                  {details.urls &&
+                    details.urls.map(url => (
+                      <>
+                        <a href={url.url} target="blank" alt={details.name}>
+                          {url.url}
+                        </a>
+                        <br />
+                      </>
+                    ))}
                 </div>
               </>
             )}

@@ -20,7 +20,7 @@ class List extends Component {
       <>
         {!isLoading && (
           <div className={`${heroesListCss}`}>
-            <h1>List of characters</h1>
+            <h4>Marvel characters</h4>
             {characters &&
               characters.map((character, i) => (
                 <Character
@@ -37,6 +37,9 @@ class List extends Component {
 }
 
 const heroesListCss = css({
+  "> h4": {
+    margin: "20px"
+  },
   flexGrow: 1,
   flexDirection: "column",
   backgroundColor: "#000",
