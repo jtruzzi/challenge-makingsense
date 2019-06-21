@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/marvel-superheroes-demo/static/js/main.b7775421.chunk.js",
-    "main.js.map": "/marvel-superheroes-demo/static/js/main.b7775421.chunk.js.map",
+    "main.js": "/marvel-superheroes-demo/static/js/main.67d992b3.chunk.js",
+    "main.js.map": "/marvel-superheroes-demo/static/js/main.67d992b3.chunk.js.map",
     "runtime~main.js": "/marvel-superheroes-demo/static/js/runtime~main.491b8370.js",
     "runtime~main.js.map": "/marvel-superheroes-demo/static/js/runtime~main.491b8370.js.map",
     "static/js/2.b2e31b50.chunk.js": "/marvel-superheroes-demo/static/js/2.b2e31b50.chunk.js",
     "static/js/2.b2e31b50.chunk.js.map": "/marvel-superheroes-demo/static/js/2.b2e31b50.chunk.js.map",
     "index.html": "/marvel-superheroes-demo/index.html",
-    "precache-manifest.313c515bbfc09b5e0b5dd40bd8a9f08f.js": "/marvel-superheroes-demo/precache-manifest.313c515bbfc09b5e0b5dd40bd8a9f08f.js",
+    "precache-manifest.4f0cdc7c5a3457716da6e946fff5f7f9.js": "/marvel-superheroes-demo/precache-manifest.4f0cdc7c5a3457716da6e946fff5f7f9.js",
     "service-worker.js": "/marvel-superheroes-demo/service-worker.js"
   }
 }
