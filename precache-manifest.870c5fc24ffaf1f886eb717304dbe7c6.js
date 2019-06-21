@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4600cf468fc856a99585bfa674a1fcfe",
+    "revision": "2ab7d111dc5a6bfca44c614b8a85eb34",
     "url": "/marvel-superheroes-demo/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/marvel-superheroes-demo/static/js/2.b2e31b50.chunk.js"
   },
   {
-    "revision": "9bdf1a5696f8d25d088e",
-    "url": "/marvel-superheroes-demo/static/js/main.67d992b3.chunk.js"
+    "revision": "d87d2fb2cf4a123bd609",
+    "url": "/marvel-superheroes-demo/static/js/main.00bd419d.chunk.js"
   },
   {
     "revision": "ae58ff9afc5c0d253c5e",
