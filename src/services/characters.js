@@ -54,7 +54,7 @@ const buildBaseQuerystrings = () => {
   const ts = Math.floor(Date.now());
 
   return {
-    apikey: process.env.REACT_APP_MARVEL_PRIVATE_KEY,
+    apikey: process.env.REACT_APP_MARVEL_PUBLIC_KEY,
     ts: ts,
     hash: createAuthenticationHash(ts)
   };
